@@ -1,0 +1,368 @@
+/*Configuraciones generales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+@font-face {
+    font-family: edosz;
+    src: url('../font/edo_sz/edosz.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+h1 {
+    font-family: edosz;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white
+}
+
+a:active {
+    text-decoration: none;
+    color: white
+}
+
+
+/* 1 - Pagina de bienvenida*/
+
+/* A) Grid de index*/
+
+#index {
+    min-height: 100vh;
+    background-image: url(../images/indexbackgroundALT.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    display: grid;
+    grid-template-areas:
+    "nav main aside"
+    "nav main aside"
+    "footer footer footer";
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: 1.7fr 6fr 0.2fr;
+    row-gap: 2px;
+}
+
+#navIndex {
+    grid-area: nav;
+}
+
+#mainIndex {
+    grid-area: main;
+    border: 10px solid black;
+}
+
+#asideIndex{
+    grid-area: aside;
+}
+
+/*Flex index*/
+
+#mainContentIndex{
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 110px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#indexYamato {
+    font-size: 300%;
+    text-align: center;
+    justify-content: center;
+}
+
+#texto{
+    padding: 0.5%;
+    font-size: 140%;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#logo {
+    height: auto;
+    max-width: 200px;
+    width: auto;
+    max-height: 200px;
+}
+
+/* Configuraciones boton de entrada*/
+
+#enterButton{
+    background-color: black;
+    padding: 9px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#enterButton a:link {
+    text-decoration: none;
+    color: white;
+}
+#enterButton a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+#enterButton a:hover {
+    text-decoration: underline ;
+    color: white;
+}
+
+#enterButton a:active {
+    text-decoration: none;
+    color: white
+}
+
+
+/* 2 - Paginas de Secciones*/
+
+/* A) - Grid Secciones*/
+#regularPage {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header header header"
+    "nav main aside"
+    "nav main aside"
+    "footer footer footer";
+    grid-template-columns: 0.8fr 4fr 0.8fr;
+    grid-template-rows: 0.1fr 4fr 4fr 0.1fr;
+    row-gap: 2px;
+    column-gap: 2px;
+}
+
+header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#gridHeader {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+#logoPage {
+    background-color: black;
+    width: 40%;
+}
+
+#logoHeader {
+    height: 100%;
+    max-width: 450px;
+    width: auto;
+    max-height: 200px;
+}
+
+#dummy{
+    background-color: black;
+    color: black;
+    width: 35%;
+    height: 100%;
+}
+
+#crownHeader {
+    height: 100%;
+    max-width: 700px;
+    width: auto;
+    max-height:130px;
+}
+
+#social {
+    height: 100%;
+    background-color: black;
+    color: black;
+    width: 25%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 20px;
+}
+
+.socialIcon{
+    width: 100%;
+    height: 100%;
+    max-width: 64px;
+    max-height: 64px;
+    margin: 3px;
+}
+
+#navPage{
+    grid-area: nav;
+    background-image: url(../images/mainBack.jpg);
+    background-size: 160%;
+    position: sticky;
+}
+
+#buttonsBox {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#multimedia{
+    padding: 6px 0 0 0;
+}
+
+#featuredBox{
+    border: black 2px;
+    font-family: edosz;
+    color: white;
+    text-align: center;
+}
+
+#mainPage {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(../images/mainBack.jpg);
+    background-size: 35%;
+    background-color: white;
+    grid-area: main;
+    border: 3px solid black;
+}
+
+.titleFormat {
+    font-size: 500%;
+    color: white;
+}
+
+/*Clothing*/
+
+.clothingBox {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 6px;
+    align-content: center;
+    justify-content: center;
+}
+
+.card-img-top {
+    max-height: 200px;
+}
+
+.card-body {
+    background-color: #212529;
+}
+
+.card-body h5 {
+    color: white;
+}
+
+.card-body p {
+    color: white;
+}
+
+/*accesories*/
+.carousel{
+    height: auto;
+    width: auto;
+    max-width:700px;
+    max-height:500px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.carousel-caption {
+    top: 10;
+    bottom: auto;
+}
+
+.carousel h5 {
+    color: black;
+}
+
+.carousel p{
+    color: black;
+}
+
+#asidePage{
+    background-color:red;
+    grid-area: aside;
+    text-align: center;
+    align-content: center ;
+    justify-content: center;
+}
+
+#rebel {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
+#rebel h2{
+    color: white;
+    font-size: 350%;
+    text-align: center;
+    align-content: center;
+}
+
+/*Contact*/
+
+#contactBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 4px black solid;
+    padding: 6px;
+}
+
+/* Footer general*/
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    grid-area: footer;
+    padding: 16px;
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
+}
